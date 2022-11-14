@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 2</title>
+    <link rel="stylesheet" href="../loops2/styles.css" />
+  </head>
+  <body>
+    <section class="preview">
+    </section>
+  </body>
+  <script>
+
+    const name = 'Chris';
+    const para = document.createElement('p');
+
+    const phoneBook = [
+      { name : 'Chris', number : '1549' },
+      { name : 'Li Kang', number : '9634' },
+      { name : 'Anne', number : '9065' },
+      { name : 'Francesca', number : '3001' },
+      { name : 'Mustafa', number : '6888' },
+      { name : 'Tina', number : '4312' },
+      { name : 'Bert', number : '7780' },
+      { name : 'Jada', number : '2282' },
+    ]
+
+    // Add your code here
+    let i=0;
+    while (i < phoneBook.length) {
+        if (phoneBook[i].name === name) {
+            para.textContent = `${phoneBook[i].name}'s number is ${phoneBook[i].number}`;
+            break;
+        }   else {
+            para.textContent = "No name found.";    
+        }
+        i++;
+    }
+    
+    // Don't edit the code below here!
+    const section = document.querySelector('section');
+    section.appendChild(para);
+  </script>
+
+</html>
